@@ -1,0 +1,34 @@
+npx create-react-app frontend
+cd frontend
+delete app.css, test and  xxx files
+delete .git folder using  rm -rf .git
+cd proshop-v2
+Run git init
+Run git add .
+Run git commit -m "Initializing"
+create a remote git repository called "proshop" on github
+on proshop-v2 folder Run  "git remote add origin https://github.com/pnageshkar/proshop.git"
+Run git branch -M main
+Run git push -u origin main
+
+// Header and footer
+cd frontend
+Run npm i react-bootstrap bootstrap react-icons
+In index.js file - import 'bootstrap/dist/css/bootstrap.min.css';
+create a components folder inside src folder
+Inside components folder - create components files called  Header.jsx and Footer.jsx
+
+//Custom BootStrap Theme
+Copy assets folder inside src folder. It contains the styles folder that has custom theme and index.css files.
+
+//Products images and  json files
+Download images folder and copy it inside public folder
+copy the products.js file to src folder
+Create Home page - list products from json file
+Create Products component
+
+// Implement React Router
+npm install react-router-dom
+npm install react-router-bootstrap
+
+//Rating component
