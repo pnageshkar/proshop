@@ -33,3 +33,88 @@ npm install react-router-bootstrap
 
 //Rating component
 Implement Rating.jsx component
+
+//Product Details page
+Implement ProductDetail.jsx page
+
+//Server setup
+cd to proshop-v2 directory
+run npm init (create package.json for server side)
+type the line - "type" : "module", in package.json , below the description line
+(This is necessary in order to use "import"  as in ES6 modules instead of using the traditional "requires".)
+create a backend folder and add a server.js file to it ,as the server entry point.
+Inside package.json add  " "start" : "node backend/server.js " line under "scripts". you can remove the command for "test"
+- npm install express
+
+create a data folder  under backend and  copy product.js file  to it.
+
+Install Nodemon and Concurrently (Nodemon  automatically restarts the server after changes to the code)
+- npm install -D nodemon concurrently
+Inside package.json add the following lines under "scripts" key below "start" line:
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm  run server\" \"npm run client\""
+This allows us to run both client and server using the following command:
+- npm run dev
+server runs of port 5000 and client on port 3000
+stop the server and client
+
+npm install -D dotenv   - This will allow us to define the environment variables in .env file.
+create a .env file in the root folder(proshop-v2).
+
+//Fetch Products
+cd frontend
+npm install axios
+add  ""proxy": "http://localhost:5000"," to package.json
+use axios to fetch data from the server
+
+
+// Setting up Database - MongoDB and Mongoose
+Go to MongoDB.com  Atlas and create a project
+Create a database called Proshop.
+copy the connection string to .env file and assign it to a constant MONGO_URI
+npm install mongoose
+create a folder called config under backend and add a new file called db.js 
+write code to create connectDB function to  connect to the MongoDB database.
+
+//Modeling the database
+create a folder called models under backend.
+Add model files productModel.js , userModel.js and orderModel.js
+In the above files define the schemas for product, user and order tables
+From the db.js file removed all enries for "_id" field, since Mongodb will create the if field.
+
+Like db.js has product related data, we need to create data for users
+create a file named users.js inside the data folder
+
+npm install colors - to display different colored text in the console
+
+//seed database with sample data
+create a file called seeder.js - This script when run ,creates the schemas and loads sample data
+Add the following two lines to package.json file  under "scripts"
+"data:import": "node backend/seeder",
+"data:destroy": "node backend/seeder -d"
+Executing the first command will create and seed the database
+Executing the second command will delete all the existing data.
+
+// Using Postman
+Download Postman
+create workspace proshop-v2
+create proshopv2 environment
+create  an environment variable baseURL = http://localhost:5000/api
+selec the Proshop-v2 environment from the drop-down 
+create a new api
+
+// Create seperate routes using "express Router" - avoid cluttering in server.js
+create a folder called "routes" under backend folder 
+create individual files for orderRoutes.js, "productRoutes.js userRoutes.js inside that folder.
+In the server.js file add the hooks to fire off the appropriate router file
+
+// async handler
+create a middleware folder and asyncHandler.js file under that
+This is for handling promises returned by Mongoose methods
+
+//Error handler
+create  errorMiddleware.js file under the middleware folder
+
+// Product Controller
+

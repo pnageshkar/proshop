@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
+import { useState,useEffect } from 'react';
+import { useNavigate, useParams,Link } from 'react-router-dom';
+import axios from 'axios';
 import {
   Row,
   Col,
@@ -12,12 +11,22 @@ import {
   Form,
 } from 'react-bootstrap';
 
-import products from '../products';
+// import products from '../products';
 import Rating from '../components/Rating';
 
 const ProductDetail = () => {
+  const [product,setProduct] = useState({});
   const { id: productId } = useParams();
-  const product = products.find((p) => p._id === productId);
+  
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const {data} = await axios.get(`/api/products/${productId}`);
+      setProduct(data);
+    };
+
+    fetchProduct();
+
+  },[productId]);
 
   return (
     <>
