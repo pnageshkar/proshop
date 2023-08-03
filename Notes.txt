@@ -118,3 +118,17 @@ create  errorMiddleware.js file under the middleware folder
 
 // Product Controller
 
+//Redux toolkit and state management
+got to frontend folder
+npm install @reduxjs/toolkit react-redux
+create a file called "store.js" under 'src' folder
+create a file called "constants.js" under 'src' folder
+create a folder called "slices"
+create a file called "apiSlice.js under "slices" folder
+create a file called "productsApiSlice.js under "slices" folder
+
+//Loader & Message components
+create a file called "Loader.jsx " under components folder
+create a file called "Message.jsx " under components folder
+
+
