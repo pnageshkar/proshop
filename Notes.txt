@@ -118,7 +118,8 @@ create  errorMiddleware.js file under the middleware folder
 
 // Product Controller
 
-//Redux toolkit and state management
+//Redux toolkit and state management -using  RTK query
+// Check out https://blog.openreplay.com/fetching-data-in-redux-using-rtk-query/
 got to frontend folder
 npm install @reduxjs/toolkit react-redux
 create a file called "store.js" under 'src' folder
@@ -131,4 +132,7 @@ create a file called "productsApiSlice.js under "slices" folder
 create a file called "Loader.jsx " under components folder
 create a file called "Message.jsx " under components folder
 
+//Shopping cart
+create a file called "cartSlice.js " under slices folder
+create a file called "cartUtils.js " under "src/utils" folder
 
