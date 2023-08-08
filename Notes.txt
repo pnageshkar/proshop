@@ -136,3 +136,21 @@ create a file called "Message.jsx " under components folder
 create a file called "cartSlice.js " under slices folder
 create a file called "cartUtils.js " under "src/utils" folder
 
+//Backend authentication
+create a file called "userRoutes.js under "backend/routes" folder
+create a file called "userController.js under "backend/controllers" folder
+JWT authentication
+run npm install jsonwebtoken
+run npm install cookie-parser
+update server.js to use cookie-parser to receive cookies
+
+create authMiddleware.js under "middleware" folder
+implement 2 functions 
+- one (protect) for authorizing  access to selected routes to authenticated user only
+- other (admin) for authorization of access to routes for authenticated admin user only
+add these to the appropriate HTTP requests in userRoutes.js file
+
+create a utils folder under backend folder
+create a file called generateToken.js under "utils" folder
+copy the code for token generation from userController.js file in to a function
+complete the code for user registration, profile
