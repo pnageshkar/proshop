@@ -154,3 +154,14 @@ create a utils folder under backend folder
 create a file called generateToken.js under "utils" folder
 copy the code for token generation from userController.js file in to a function
 complete the code for user registration, profile
+
+//Frontend authentication
+create a file called authSlice.js under "frontend/src/slices" folder
+create a file called usersApiSlice.js under "frontend/src/slices" folder
+create a component called FormContainer.jsx under "components" folder - Reusable Form
+create a page called Login.jsx under "pages" folder
+setup the route in index.js file
+cd frontend
+npm install react-toastify
+
+create a page Register.jsx under "pages" folder
