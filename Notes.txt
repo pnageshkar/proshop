@@ -163,5 +163,33 @@ create a page called Login.jsx under "pages" folder
 setup the route in index.js file
 cd frontend
 npm install react-toastify
-
 create a page Register.jsx under "pages" folder
+
+//Checkout process - part 1
+Add a page  "Shipping.jsx" under "pages" folder
+create a private route component PrivateRoute.jsx under "components" folder
+This is to prevent direct acces without login to a protected page like Shipping.jsx
+Add this to index.js
+
+create a component checkoutSteps.jsx under "components" folder
+import  this in Shipping.jsx file
+create a page called Payment.jsx under "pages" folder
+
+// Complete Order process
+cd backend
+create  orderController.js and orderRoutes.js
+
+cd frontend
+create ordersAPISlice.js
+create a page called PlaceOrder.jsx under "pages" folder
+Create a page called Order.jsx under "pages" folder
+
+Creata a Paypal developer account (developer.paypal.com)
+copy the clientID under  API credentials and  paste it in .env file
+npm install @paypal/react-paypal-js
+
+import { PayPalScriptProvider } from '@paypal/react-paypal-js' in index.js
+Insert Paypal Provider in index.js
+update ordersAPISlice and Order page
+
+create a new page Profile.jsx
