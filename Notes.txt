@@ -184,7 +184,7 @@ create ordersAPISlice.js
 create a page called PlaceOrder.jsx under "pages" folder
 Create a page called Order.jsx under "pages" folder
 
-Creata a Paypal developer account (developer.paypal.com)
+Create a Paypal developer account (developer.paypal.com)
 copy the clientID under  API credentials and  paste it in .env file
 npm install @paypal/react-paypal-js
 
@@ -193,3 +193,36 @@ Insert Paypal Provider in index.js
 update ordersAPISlice and Order page
 
 create a new page Profile.jsx
+
+
+// Admin Functionality
+
+Create a folder called 'admin' under 'pages' folder
+create a admin route component for access to the admin pages - create AdminRoute.jsx under 'components' folder
+update Header to  add links to pages meant for the admin
+
+create a new page called OrderList.jsx under admin folder
+Update the orderController, ordersAPISlice and Order.jsx page to implement the Update Order Delivery status
+
+create a new page called ProductList.jsx for listing Products under admin folder
+
+create a product 
+Update the productController, productsAPISlice and ProductList page to implement the create Product Functionality
+create a new page called ProductEdit.jsx under admin folder
+
+Multer & Image Upload 
+cd root folder
+npm install Multer
+create uploadRoutes.js under routes folder
+create a  new folder called uploads in the root folder
+update productController, productAPISlice and productRoutes and ProductEdit.jsx page
+
+Admin - User management
+update userController for admin Functionality (ListAll,Update and Delete)
+update userApiSlice for admin Functionality (ListAll,Update and Delete) 
+create a page called UserList.jsx under admin folder
+create a new page called UserEdit.jsx under admin folder
+
+Create Reviews
+update code in productController and productRoutes
+update code productAPISlice and ProductDetail.jsx page

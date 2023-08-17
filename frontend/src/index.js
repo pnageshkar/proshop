@@ -14,17 +14,25 @@ import './assets/styles/bootstrap.custom.css';
 import './assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PrivateRoute from './components/PrivateRoute';
+import AdminRoute from './components/AdminRoute';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Shipping from './pages/Shipping';
-import PrivateRoute from './components/PrivateRoute';
+
 import Payment from './pages/Payment';
 import PlaceOrder from './pages/PlaceOrder';
 import Order from './pages/Order';
 import Profile from './pages/Profile';
+
+import OrderList from './pages/admin/OrderList';
+import ProductList from './pages/admin/ProductList';
+import ProductEdit from './pages/admin/ProductEdit';
+import UserList from './pages/admin/UserList';
+import UserEdit from './pages/admin/UserEdit';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,6 +50,19 @@ const router = createBrowserRouter(
         <Route path='/placeorder' element={<PlaceOrder />} />
         <Route path='/order/:id' element={<Order />} />
         <Route path='/profile' element={<Profile />} />
+      </Route>
+
+      {/* Admin users */}
+      <Route path='' element={<AdminRoute />}>
+        <Route path='/admin/orderlist' element={<OrderList />} />
+        <Route path='/admin/productlist' element={<ProductList />} />
+        <Route path='/admin/product/:id/edit' element={<ProductEdit />} />
+        {/* <Route
+          path='/admin/productlist/:pageNumber'
+          element={<ProductList />}
+        /> */}
+        <Route path='/admin/userlist' element={<UserList />} />
+        <Route path='/admin/user/:id/edit' element={<UserEdit />} />
       </Route>
     </Route>
   )
