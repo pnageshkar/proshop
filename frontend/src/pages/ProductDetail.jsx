@@ -20,7 +20,7 @@ import { addToCart } from '../slices/cartSlice';
 import Loader from '../components/Loader';
 import Rating from '../components/Rating';
 import Message from '../components/Message';
-// import Meta from '../components/Meta';
+import Meta from '../components/Meta';
 
 const ProductDetail = () => {
   const { id: productId } = useParams();
@@ -58,7 +58,7 @@ const ProductDetail = () => {
         comment,
       }).unwrap();
       refetch();
-      toast.success('Review created successfully');
+      toast.success('Review submitted successfully');
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
@@ -77,7 +77,7 @@ const ProductDetail = () => {
         </Message>
       ) : (
         <>
-          {/* <Meta title={product.name} description={product.description} /> */}
+          <Meta title={product.name} description={product.description} />
           <Row>
             <Col md={5}>
               <Image src={product.image} alt={product.name} fluid />

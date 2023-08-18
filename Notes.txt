@@ -226,3 +226,25 @@ create a new page called UserEdit.jsx under admin folder
 Create Reviews
 update code in productController and productRoutes
 update code productAPISlice and ProductDetail.jsx page
+
+Implement Pagination
+Update code in productController, productsAPISlice and index.js page
+create a new component called Paginate.jsx
+
+Implement Search Product
+First the backend
+Update code in productController and productAPISlice to include keyword in getProducts method
+Update code in Home page and index.js
+Update code in Paginate component
+Create a Search Box component - SearchBox.jsx
+Include Search Box in Header component
+
+Implement Product Carousel
+Update code (Get Top Products) in productController,productRoutes and productAPISlice
+Create a new component called ProductCarousel.jsx
+Include in Home page 
+
+Page Titles
+npm install react-helmet-async
+wrap helmet provider in index.js
+create a new component called Meta.jsx
